@@ -4,7 +4,7 @@ import React from "react";
 import ProductFormScreen from "./screens/ProductFormScreen";
 import HomeScreen from "./screens/HomeScreen";
 import EditProductFormScreen from "./screens/EditProductFormScreen";
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,7 +24,9 @@ const App = () => {
                   justifyContent: "center",
                 }}
               >
-                <Text style={{ fontWeight: "bold", color: "white" }}>
+                <Text
+                  style={{ fontWeight: "bold", color: "white", fontSize: 28 }}
+                >
                   NefSports®
                 </Text>
               </View>
