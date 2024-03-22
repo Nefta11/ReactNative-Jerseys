@@ -5,6 +5,7 @@ import { updateClothe } from "../api";
 const EditClotheFormScreen = ({ navigation, route }) => {
   const { item } = route.params;
   const [clothe, setClothe] = useState({
+    urlImg: item?.urlImg ?? "",
     code: item?.code ?? "",
     team: item?.team ?? "",
     price: item?.price ?? "",
