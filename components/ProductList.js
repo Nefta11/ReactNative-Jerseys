@@ -32,7 +32,7 @@ const ClotheList = () => { // Cambiado de ProductList a ClotheList
     }, []);
 
     const renderItem = ({ item }) => {
-        return <ClotheItem item={item} deleteCloth={deleteCloth} navigation={navigation} />; // Cambiado de ProductItem a ClotheItem y deleteProd a deleteCloth
+        return <ClotheItem item={item} deleteCloth={deleteCloth} navigation={navigation} />; 
     };
 
     return (

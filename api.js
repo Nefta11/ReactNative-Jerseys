@@ -30,7 +30,7 @@ export const insertClothe = async (clothe) => {
 
 export const updateClothe = async (code, updatedClothe) => {
     const res = await fetch(`${URL_API}/${code}`, {
-        method: "PUT",
+        method: "PUT", 
         headers: {
             Accept: 'application/json',
             "Content-Type": 'application/json',

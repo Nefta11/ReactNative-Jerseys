@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const ProductItem = ({ item, deleteProd, navigation }) => {
   return (
@@ -38,10 +38,11 @@ const ProductItem = ({ item, deleteProd, navigation }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#e29578',
+    backgroundColor: '#4B0082',
     borderRadius: 10,
     marginBottom: 10,
     padding: 10,
+    alignItems: 'center',
   },
   cardHeader: {
     borderBottomWidth: 2,
@@ -52,38 +53,42 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     fontWeight: 'bold',
+    color: '#fff',
   },
   cardBody: {
     marginBottom: 5,
+    alignItems: 'center',
   },
   textItem: {
     fontSize: 14,
+    color: '#fff',
+    marginBottom: 3,
   },
   image: {
-    width: 100, // ajustar según tus necesidades
-    height: 100, // ajustar según tus necesidades
-    resizeMode: 'cover', // ajustar según tus necesidades
+    width: 100,
+    height: 100,
+    resizeMode: 'cover',
     marginBottom: 5,
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginTop: 10,
+    width: '100%',
   },
   buttonEdit: {
-    backgroundColor: '#A2A4A0',
+    backgroundColor: 'black',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
-    marginTop: 10,
-    width: '30%',
+    width: '45%',
   },
   buttonDelete: {
-    backgroundColor: '#F1480F',
+    backgroundColor: 'red',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
-    marginTop: 10,
-    width: '30%',
+    width: '45%',
   },
   buttonText: {
     color: '#fff',

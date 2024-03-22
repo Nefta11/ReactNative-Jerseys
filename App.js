@@ -17,7 +17,7 @@ const App = () => {
           name="HomeScreen" 
           component={HomeScreen} 
           options={({ navigation }) => ({
-            title: 'Abarrotes App',
+            title: 'NefSports®',
             headerTitleStyle: { fontWeight: 'bold' },
             headerRight: () => (
               <TouchableOpacity onPress={() => navigation.navigate("ProductFormScreen")}>

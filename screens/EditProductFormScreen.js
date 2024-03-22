@@ -1,41 +1,42 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
-import { insertClothe } from '../api';
+import { updateClothe } from '../api';
 
-const ProductFormScreen = ({ navigation }) => {
+const EditClotheFormScreen = ({ navigation, route }) => {
+    const { item } = route.params;
     const [clothe, setClothe] = useState({
-        code: '',
-        description: '',
-        team: '',
-        price: '',
-        size: '',
-        color: '',
-        stock: '',
-        season: '',
-        status: ''
+        code: item?.code ?? '',
+        team: item?.team ?? '',
+        price: item?.price ?? '',
+        size: item?.size ?? '',
+        color: item?.color ?? '',
+        stock: item?.stock ?? '',
+        season: item?.season ?? '',
+        status: item?.status ?? ''
     });
 
     const handleChange = (name, value) => setClothe({ ...clothe, [name]: value });
 
-    const handleEnviarFormulario = async () => {
-        const res = await insertClothe(clothe);
-        console.log(JSON.stringify(clothe));
-        navigation.navigate('HomeScreen');
+    const handleSaveChanges = async () => {
+        try {
+            const response = await updateClothe(clothe.code, clothe);
+            console.log('Response:', response);
+            const data = JSON.parse(response);
+            console.log("Cambios guardados exitosamente:", data);
+            navigation.goBack();
+        } catch (error) {
+            console.error("Error al guardar los cambios:", error);
+        }
     };
+    
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Nuevo Producto</Text>
+            <Text style={styles.title}>Editar Jersey</Text>
             <TextInput
                 placeholder="Código de barras"
                 value={clothe.code}
                 onChangeText={(text) => handleChange('code', text)}
-                style={styles.input}
-            />
-            <TextInput
-                placeholder="Descripción"
-                value={clothe.description}
-                onChangeText={(text) => handleChange('description', text)}
                 style={styles.input}
             />
             <TextInput
@@ -84,22 +85,21 @@ const ProductFormScreen = ({ navigation }) => {
                 style={styles.input}
             />
             <Button
-                title="Guardar Producto"
-                onPress={handleEnviarFormulario}
+                title="Guardar Cambios"
+                onPress={handleSaveChanges}
                 style={styles.button}
             />
         </View>
     );
-};
+}
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#ffddd2",
         flex: 1,
         justifyContent: 'center',
         paddingHorizontal: 20,
     },
-    titulo: {
+    title: {
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 20,
@@ -123,4 +123,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ProductFormScreen;
+export default EditClotheFormScreen;

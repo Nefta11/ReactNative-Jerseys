@@ -25,7 +25,7 @@ const ProductFormScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Nuevo Producto</Text>
+            <Text style={styles.titulo}>Nuevo Jersey</Text>
             <TextInput
                 placeholder="Código de barras"
                 value={clothe.code}
@@ -84,7 +84,7 @@ const ProductFormScreen = ({ navigation }) => {
                 style={styles.input}
             />
             <Button
-                title="Guardar Producto"
+                title="Guardar Jersey"
                 onPress={handleEnviarFormulario}
                 style={styles.button}
             />
