@@ -56,7 +56,7 @@ const ClotheList = () => { // Cambiado de ProductList a ClotheList
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ffddd2',
+        backgroundColor: '#fffd',
         paddingLeft: 40,
         paddingRight: 40,
         paddingTop: 20,
