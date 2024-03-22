@@ -38,8 +38,8 @@ const ClotheList = () => { // Cambiado de ProductList a ClotheList
     return (
         <View style={styles.container}>
             <FlatList
-                data={clothes} // Cambiado de products a clothes
-                renderItem={renderItem}
+                data={clothes} 
+                                renderItem={renderItem}
                 keyExtractor={(item) => item.code} // Cambiado de barcode a code
                 refreshControl={
                     <RefreshControl
