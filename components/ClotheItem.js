@@ -1,7 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { deleteClothe } from '../api'; // Asegúrate de importar deleteClothe
 
-const ProductItem = ({ item, deleteProd, navigation }) => {
+const ProductItem = ({ item, navigation }) => {
+  const handleDelete = async () => {
+    try {
+      const response = await deleteClothe(item.code);
+      console.log(response); // Imprime la respuesta para depuración
+      // Aquí puedes agregar código para actualizar la lista de productos después de eliminar uno
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <View style={styles.card}>
       <View style={styles.cardHeader}>
@@ -28,7 +39,7 @@ const ProductItem = ({ item, deleteProd, navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonDelete}
-          onPress={() => deleteProd(item.code)}>
+          onPress={handleDelete}>
           <Text style={styles.buttonText}>Eliminar</Text>
         </TouchableOpacity>
       </View>
@@ -38,7 +49,7 @@ const ProductItem = ({ item, deleteProd, navigation }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#4B0082',
+    backgroundColor: '#6c4675',
     borderRadius: 10,
     marginBottom: 10,
     padding: 10,

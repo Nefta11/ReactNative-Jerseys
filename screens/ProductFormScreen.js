@@ -4,6 +4,7 @@ import { insertClothe } from '../api';
 
 const ProductFormScreen = ({ navigation }) => {
     const [clothe, setClothe] = useState({
+        urlImg: '',
         code: '',
         description: '',
         team: '',
@@ -26,6 +27,12 @@ const ProductFormScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.titulo}>Nuevo Jersey</Text>
+            <TextInput
+                placeholder="URL de la imagen"
+                value={clothe.urlImg}
+                onChangeText={(text) => handleChange('urlImg', text)}
+                style={styles.input}
+            />
             <TextInput
                 placeholder="Código de barras"
                 value={clothe.code}
@@ -88,7 +95,7 @@ const ProductFormScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#ffddd2",
+        backgroundColor: "#fff",
         flex: 1,
         justifyContent: 'center',
         paddingHorizontal: 20,
@@ -104,7 +111,7 @@ const styles = StyleSheet.create({
     },
     input: {
         height: 40,
-        borderColor: '#e29578',
+        borderColor: '#6c4675',
         borderWidth: 1,
         marginBottom: 10,
         paddingHorizontal: 10,
