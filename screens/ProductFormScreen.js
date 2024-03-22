@@ -33,12 +33,6 @@ const ProductFormScreen = ({ navigation }) => {
                 style={styles.input}
             />
             <TextInput
-                placeholder="Descripción"
-                value={clothe.description}
-                onChangeText={(text) => handleChange('description', text)}
-                style={styles.input}
-            />
-            <TextInput
                 placeholder="Equipo"
                 value={clothe.team}
                 onChangeText={(text) => handleChange('team', text)}
