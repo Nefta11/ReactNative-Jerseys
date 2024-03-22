@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
-import { insertProduct } from '../api';
+import { insertClothe } from '../api';
 
 const ProductFormScreen = ({ navigation }) => {
-    const [product, setProduct] = useState({
-        barcode: '',
+    const [clothe, setClothe] = useState({
+        code: '',
         description: '',
-        brand: '',
-        cost: '',
-        price:'',
-        expiredDate: '',
+        team: '',
+        price: '',
+        size: '',
+        color: '',
+        stock: '',
+        season: '',
         status: '',
-        stock: ''
     });
 
-    const handleChange = (name, value) => setProduct({ ...product, [name]: value });
+    const handleChange = (name, value) => setClothe({ ...clothe, [name]: value });
 
     const handleEnviarFormulario = async () => {
-        const res = await insertProduct(product);
-        console.log(JSON.stringify(product));
+        const res = await insertClothe(clothe);
+        console.log(JSON.stringify(clothe));
         navigation.navigate('HomeScreen');
     };
 
@@ -27,53 +28,58 @@ const ProductFormScreen = ({ navigation }) => {
             <Text style={styles.titulo}>Nuevo Producto</Text>
             <TextInput
                 placeholder="Código de barras"
-                value={product.barcode}
-                onChangeText={(text) => handleChange('barcode', text)}
+                value={clothe.code}
+                onChangeText={(text) => handleChange('code', text)}
                 style={styles.input}
             />
             <TextInput
                 placeholder="Descripción"
-                value={product.description}
+                value={clothe.description}
                 onChangeText={(text) => handleChange('description', text)}
                 style={styles.input}
             />
             <TextInput
-                placeholder="Marca"
-                value={product.brand}
-                onChangeText={(text) => handleChange('brand', text)}
+                placeholder="Equipo"
+                value={clothe.team}
+                onChangeText={(text) => handleChange('team', text)}
                 style={styles.input}
             />
             <TextInput
-                placeholder="Precio de compra"
+                placeholder="Precio"
                 keyboardType='numeric'
-                value={product.cost.toString()}
-                onChangeText={(text) => handleChange('cost', text)}
-                style={styles.input}
-            />
-            <TextInput
-                placeholder="Precio de venta"
-                keyboardType='numeric'
-                value={product.price.toString()}
+                value={clothe.price.toString()}
                 onChangeText={(text) => handleChange('price', text)}
                 style={styles.input}
             />
             <TextInput
-                placeholder="Fecha de caducidad"
-                value={product.expiredDate}
-                onChangeText={(text) => handleChange('expiredDate', text)}
+                placeholder="Tamaño"
+                value={clothe.size}
+                onChangeText={(text) => handleChange('size', text)}
+                style={styles.input}
+            />
+            <TextInput
+                placeholder="Color"
+                value={clothe.color}
+                onChangeText={(text) => handleChange('color', text)}
                 style={styles.input}
             />
             <TextInput
                 placeholder="Existencias"
                 keyboardType='numeric'
-                value={product.stock.toString()}
-                onChangeText={(text) => handleChange('stock',text)}
+                value={clothe.stock.toString()}
+                onChangeText={(text) => handleChange('stock', text)}
+                style={styles.input}
+            />
+            <TextInput
+                placeholder="Temporada"
+                value={clothe.season}
+                onChangeText={(text) => handleChange('season', text)}
                 style={styles.input}
             />
             <TextInput
                 placeholder="Estado"
                 keyboardType='numeric'
-                value={product.status.toString()}
+                value={clothe.status.toString()}
                 onChangeText={(text) => handleChange('status', text)}
                 style={styles.input}
             />

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
 
 const ProductItem = ({ item, deleteProd, navigation }) => {
@@ -8,14 +8,15 @@ const ProductItem = ({ item, deleteProd, navigation }) => {
         <Text style={styles.description}>{item.description}</Text>
       </View>
       <View style={styles.cardBody}>
-        <Text style={styles.textItem}>Código de barras: {item.barcode}</Text>
-        <Text style={styles.textItem}>Descripción: {item.description}</Text>
-        <Text style={styles.textItem}>Marca: {item.brand}</Text>
-        <Text style={styles.textItem}>Precio de compra: {item.cost}</Text>
-        <Text style={styles.textItem}>Precio de venta: {item.price}</Text>
-        <Text style={styles.textItem}>Fecha de caducidad: {item.expiredDate}</Text>
+        <Image source={{ uri: item.urlImg }} style={styles.image} />
+        <Text style={styles.textItem}>Código de barras: {item.code}</Text>
+        <Text style={styles.textItem}>Equipo: {item.team}</Text>
+        <Text style={styles.textItem}>Precio: {item.price}</Text>
+        <Text style={styles.textItem}>Tamaño: {item.size}</Text>
+        <Text style={styles.textItem}>Color: {item.color}</Text>
         <Text style={styles.textItem}>Existencias: {item.stock}</Text>
-        <Text style={styles.textItem}>Activo: {item.status}</Text>
+        <Text style={styles.textItem}>Temporada: {item.season}</Text>
+        <Text style={styles.textItem}>Estado: {item.status}</Text>
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
@@ -27,7 +28,7 @@ const ProductItem = ({ item, deleteProd, navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonDelete}
-          onPress={() => deleteProd(item.barcode)}>
+          onPress={() => deleteProd(item.code)}>
           <Text style={styles.buttonText}>Eliminar</Text>
         </TouchableOpacity>
       </View>
@@ -57,6 +58,12 @@ const styles = StyleSheet.create({
   },
   textItem: {
     fontSize: 14,
+  },
+  image: {
+    width: 100, // ajustar según tus necesidades
+    height: 100, // ajustar según tus necesidades
+    resizeMode: 'cover', // ajustar según tus necesidades
+    marginBottom: 5,
   },
   buttonContainer: {
     flexDirection: 'row',
