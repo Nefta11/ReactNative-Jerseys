@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import { deleteClothe } from '../api'; // Asegúrate de importar deleteClothe
+import { deleteClothe } from '../api';
 
 const ProductItem = ({ item, navigation }) => {
   const handleDelete = async () => {
@@ -19,15 +19,19 @@ const ProductItem = ({ item, navigation }) => {
         <Text style={styles.description}>{item.description}</Text>
       </View>
       <View style={styles.cardBody}>
-        <Image source={{ uri: item.urlImg }} style={styles.image} />
-        <Text style={styles.textItem}>Código de barras: {item.code}</Text>
-        <Text style={styles.textItem}>Equipo: {item.team}</Text>
-        <Text style={styles.textItem}>Precio: {item.price}</Text>
-        <Text style={styles.textItem}>Tamaño: {item.size}</Text>
-        <Text style={styles.textItem}>Color: {item.color}</Text>
-        <Text style={styles.textItem}>Existencias: {item.stock}</Text>
-        <Text style={styles.textItem}>Temporada: {item.season}</Text>
-        <Text style={styles.textItem}>Estado: {item.status}</Text>
+        <View style={styles.imageContainer}>
+          <Image source={{ uri: item.urlImg }} style={styles.image} />
+        </View>
+        <View style={styles.detailsContainer}>
+          <Text style={styles.textItem}>Código de barras: {item.code}</Text>
+          <Text style={styles.textItem}>Equipo: {item.team}</Text>
+          <Text style={styles.textItem}>Precio: {item.price}</Text>
+          <Text style={styles.textItem}>Tamaño: {item.size}</Text>
+          <Text style={styles.textItem}>Color: {item.color}</Text>
+          <Text style={styles.textItem}>Existencias: {item.stock}</Text>
+          <Text style={styles.textItem}>Temporada: {item.season}</Text>
+          <Text style={styles.textItem}>Estado: {item.status}</Text>
+        </View>
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity
@@ -49,37 +53,49 @@ const ProductItem = ({ item, navigation }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#6c4675',
+    backgroundColor: '#E5E7E9',
     borderRadius: 10,
     marginBottom: 10,
     padding: 10,
     alignItems: 'center',
+    elevation: 3, // Agregar sombra en Android
+    shadowColor: '#000', // Agregar sombra en iOS
+    shadowOffset: { width: 0, height: 2 }, // Agregar sombra en iOS
+    shadowOpacity: 0.25, // Agregar sombra en iOS
+    shadowRadius: 3.84, // Agregar sombra en iOS
   },
   cardHeader: {
-    borderBottomWidth: 2,
-    borderBottomColor: '#ddd',
+    borderBottomWidth: 1,
+    borderBottomColor: '#BDC3C7',
     paddingBottom: 5,
     marginBottom: 5,
   },
   description: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#fff',
+    color: '#2C3E50',
   },
   cardBody: {
-    marginBottom: 5,
+    flexDirection: 'row',
     alignItems: 'center',
   },
-  textItem: {
-    fontSize: 14,
-    color: '#fff',
-    marginBottom: 3,
+  imageContainer: {
+    marginRight: 10,
   },
   image: {
     width: 100,
     height: 100,
     resizeMode: 'cover',
     marginBottom: 5,
+    borderRadius: 5,
+  },
+  detailsContainer: {
+    flex: 1,
+  },
+  textItem: {
+    fontSize: 14,
+    color: '#34495E',
+    marginBottom: 3,
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -88,21 +104,21 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   buttonEdit: {
-    backgroundColor: 'black',
+    backgroundColor: '#3498DB',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
     width: '45%',
   },
   buttonDelete: {
-    backgroundColor: 'red',
+    backgroundColor: '#E74C3C',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
     width: '45%',
   },
   buttonText: {
-    color: '#fff',
+    color: '#ECF0F1',
     fontWeight: 'bold',
   },
 });
