@@ -5,6 +5,7 @@ export const getClothes = async () => {
     return await clothes.json();
 }
 
+
 export const deleteClothe = async (code) => {
     const res = await fetch(`${URL_API}/De/${code}`, {
         method: "DELETE",
