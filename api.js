@@ -41,3 +41,4 @@ export const updateClothe = async (code, updatedClothe) => {
     return await response.json();
 }
 
+
