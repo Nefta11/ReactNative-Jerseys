@@ -28,6 +28,7 @@ export const insertClothe = async (clothe) => {
     return await res.json();
 }
 
+
 export const updateClothe = async (code, updatedClothe) => {
     const response = await fetch(`${URL_API}/${code}`, {
         method: "PUT", 
@@ -40,5 +41,3 @@ export const updateClothe = async (code, updatedClothe) => {
     console.log(response);
     return await response.json();
 }
-
-
