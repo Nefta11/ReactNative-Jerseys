@@ -22,6 +22,9 @@ const App = () => {
               <View style={{ backgroundColor: "rgb(194, 158, 206)", alignItems: "center", paddingVertical: 20 }}>
                 <Text style={{ fontWeight: "bold", color: "#000", fontSize: 28 }}>NefSports®</Text>
                 <View style={{ flexDirection: "row", justifyContent: "space-around", paddingVertical: 10 }}>
+                  <TouchableOpacity onPress={() => navigation.navigate("PrincipalScreen")} style={{ paddingHorizontal: 20 }}>
+                    <Text style={{ fontSize: 18, color: "#000" }}>Inicio</Text>
+                  </TouchableOpacity>
                   <TouchableOpacity onPress={() => alert("Navigate to Products")} style={{ paddingHorizontal: 20 }}>
                     <Text style={{ fontSize: 18, color: "#000" }}>Productos</Text>
                   </TouchableOpacity>
