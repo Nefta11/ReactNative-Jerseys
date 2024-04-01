@@ -25,7 +25,7 @@ const ProductItem = ({ item, navigation }) => {
         <View style={styles.detailsContainer}>
           <Text style={styles.textItem}>Código de barras: {item.code}</Text>
           <Text style={styles.textItem}>Equipo: {item.team}</Text>
-          <Text style={styles.textItem}>Precio: {item.price}</Text>
+          <Text style={styles.textItem}>Precio: ${item.price}</Text>
           <Text style={styles.textItem}>Tamaño: {item.size}</Text>
           <Text style={styles.textItem}>Color: {item.color}</Text>
           <Text style={styles.textItem}>Existencias: {item.stock}</Text>
@@ -53,7 +53,7 @@ const ProductItem = ({ item, navigation }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#E5E7E9',
+    backgroundColor: 'rgb(194, 158, 206)',
     borderRadius: 10,
     marginBottom: 30,
     padding: 10,
@@ -66,32 +66,27 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
     marginBottom: 5,
   },
-  description: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#2C3E50',
-  },
   cardBody: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   imageContainer: {
-    marginRight: 10,
+    marginRight: 40,
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
     resizeMode: 'cover',
     marginBottom: 5,
-    borderRadius: 5,
+    borderRadius: 10,
   },
   detailsContainer: {
     flex: 1,
   },
   textItem: {
     fontSize: 14,
-    color: '#34495E',
-    marginBottom: 3,
+    color: 'black',
+    marginBottom: 6,
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -100,14 +95,14 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   buttonEdit: {
-    backgroundColor: '#3498DB',
+    backgroundColor: 'black',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
     width: '45%',
   },
   buttonDelete: {
-    backgroundColor: '#E74C3C',
+    backgroundColor: 'black',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',

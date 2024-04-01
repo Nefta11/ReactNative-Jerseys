@@ -1,34 +1,34 @@
 import { View, FlatList, StyleSheet } from 'react-native';
 import React, { useState, useEffect } from 'react';
-import ClotheItem from './ClotheItem'; // Cambiado de ProductItem a ClotheItem
-import { deleteClothe, getClothes } from '../api'; // Cambiado de deleteProduct y getProducts a deleteClothe y getClothes
+import ClotheItem from './ClotheItem'; 
+import { deleteClothe, getClothes } from '../api'; 
 import { RefreshControl } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const ClotheList = () => { // Cambiado de ProductList a ClotheList
+const ClotheList = () => { 
     const navigation = useNavigation();
     const [refreshing, setRefreshing] = useState(false);
-    const [clothes, setClothes] = useState([]); // Cambiado de products a clothes
+    const [clothes, setClothes] = useState([]); 
 
-    const loadClothes = async () => { // Cambiado de loadProducts a loadClothes
-        const data = await getClothes(); // Cambiado de getProducts a getClothes
-        setClothes(data); // Cambiado de setProducts a setClothes
+    const loadClothes = async () => {
+        const data = await getClothes(); 
+        setClothes(data);
     };
 
-    const deleteCloth = async (code) => { // Cambiado de deleteProd a deleteCloth
-        const res = await deleteClothe(code); // Cambiado de deleteProduct a deleteClothe
-        await loadClothes(); // Cambiado de loadProducts a loadClothes
+    const deleteCloth = async (code) => { 
+        const res = await deleteClothe(code); 
+        await loadClothes(); 
         console.log(JSON.stringify(res));
     };
 
     const onRefresh = React.useCallback(async () => {
         setRefreshing(true);
-        await loadClothes(); // Cambiado de loadProducts a loadClothes
+        await loadClothes(); 
         setRefreshing(false);
     }, []);
 
     useEffect(() => {
-        loadClothes(); // Cambiado de loadProducts a loadClothes
+        loadClothes(); 
     }, []);
 
     const renderItem = ({ item }) => {
@@ -56,7 +56,7 @@ const ClotheList = () => { // Cambiado de ProductList a ClotheList
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fffd',
+        backgroundColor: 'black',
         paddingLeft: 40,
         paddingRight: 40,
         paddingTop: 20,
