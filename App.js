@@ -38,7 +38,7 @@ const App = () => {
           name="ProductFormScreen"
           component={ProductFormScreen}
           options={{
-            title: "Agregar producto",
+            title: "Agregar un nuevo jersey",
             headerStyle: {
               backgroundColor: "rgb(194, 158, 206)",
             },
@@ -64,11 +64,11 @@ const App = () => {
           name="PrincipalScreen"
           component={PrincipalScreen}
           options={{
-            title: "Principal",
+            title: "¡ Bienvenido a NefSports® ! ",
             headerStyle: {
               backgroundColor: "rgb(194, 158, 206)",
             },
-            headerTitleStyle: { fontWeight: "bold", color: "#000" },
+            headerTitleStyle: { fontWeight: "bold", color: "#000", fontSize: 28, },
             headerTintColor: "#000",
             headerTitleAlign: "center",
           }}

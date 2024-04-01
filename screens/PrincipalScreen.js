@@ -1,12 +1,10 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, Card } from 'react-native';
-import { Card } from 'react-native-paper';
-
+import { View, Text, Image, StyleSheet } from 'react-native';
 
 const PrincipalScreen = () => {
   return (
     <View style={styles.container}>
-      <Card style={styles.card}>
+      <View style={styles.card}>
         <Text style={styles.title}>
           Bienvenido a nuestro mundo de <Text style={styles.bold}>Jerseys de Fútbol Únicos y de Calidad</Text>.
         </Text>
@@ -28,7 +26,7 @@ const PrincipalScreen = () => {
         <Text style={styles.description}>
           Explora nuestra colección y encuentra el jersey perfecto para ti. ¡Únete a la comunidad de fanáticos del fútbol y viste con orgullo los colores de tu equipo favorito!
         </Text>
-      </Card>
+      </View>
     </View>
   );
 };
@@ -41,8 +39,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   card: {
-    padding: 10,
+    backgroundColor: 'rgb(194, 158, 206)',
     borderRadius: 10,
+    marginBottom: 30,
+    padding: 10,
+    alignItems: 'center',
+    elevation: 3, 
   },
   title: {
     fontSize: 24,
