@@ -10,7 +10,9 @@ const PrincipalScreen = () => {
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
-          source={require('../logo/logo.jpeg')}
+          source={{
+            uri: 'https://raw.githubusercontent.com/Nefta11/ReactNative-Jerseys/main/logo/logo.jpeg?' + new Date(),
+          }}
           resizeMode="cover"
         />
       </View>
