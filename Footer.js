@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Linking } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome'; // Importa el ícono que necesites
 
 const Footer = () => {
   const handleFacebookPress = () => {
@@ -20,19 +21,19 @@ const Footer = () => {
 
   return (
     <View style={{ alignItems: 'center', backgroundColor: '#c29ece', paddingVertical: 10 }}>
-      <Text style={{ fontSize: 16, color: 'black' }}>Developed by NeftaSiu</Text>
+      <Text style={{ fontSize: 16, color: 'black' }}>Developed by Neft</Text>
       <View style={{ flexDirection: 'row', marginTop: 10 }}>
         <TouchableOpacity onPress={handleFacebookPress}>
-          <Text style={{ color: '#1877F2', marginRight: 10 }}>Facebook</Text>
+          <Icon name="facebook" size={30} color="#1877F2" style={{ marginRight: 20 }} />
         </TouchableOpacity>
         <TouchableOpacity onPress={handleGitHubPress}>
-          <Text style={{ color: '#181717', marginRight: 10 }}>GitHub</Text>
+          <Icon name="github" size={30} color="#181717" style={{ marginRight: 20 }} />
         </TouchableOpacity>
         <TouchableOpacity onPress={handleInstagramPress}>
-          <Text style={{ color: '#E4405F', marginRight: 10 }}>Instagram</Text>
+          <Icon name="instagram" size={30} color="#E4405F" style={{ marginRight: 20 }} />
         </TouchableOpacity>
         <TouchableOpacity onPress={handleGmailPress}>
-          <Text style={{ color: '#EA4335' }}>Gmail</Text>
+          <Icon name="envelope" size={30} color="#EA4335" />
         </TouchableOpacity>
       </View>
       <Text style={{ marginTop: 10, fontSize: 14 }}>

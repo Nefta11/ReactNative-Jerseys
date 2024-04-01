@@ -40,7 +40,7 @@ const ClotheList = () => {
             <FlatList
                 data={clothes} 
                                 renderItem={renderItem}
-                keyExtractor={(item) => item.code} // Cambiado de barcode a code
+                keyExtractor={(item) => item.code} 
                 refreshControl={
                     <RefreshControl
                         refreshing={refreshing}
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         paddingLeft: 40,
         paddingRight: 40,
         paddingTop: 20,
-        marginTop: 1,
+        marginTop: -19,
     },
 });
 
