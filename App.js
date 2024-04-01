@@ -1,11 +1,12 @@
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import React from "react";
-import ProductFormScreen from "./screens/ProductFormScreen";
-import HomeScreen from "./screens/HomeScreen";
-import EditProductFormScreen from "./screens/EditProductFormScreen";
-import Footer from "./Footer";
 import { View, Text, TouchableOpacity } from "react-native";
+import HomeScreen from "./screens/HomeScreen";
+import ProductFormScreen from "./screens/ProductFormScreen";
+import EditProductFormScreen from "./screens/EditProductFormScreen";
+import PrincipalScreen from "./screens/PrincipalScreen";
+import Footer from "./Footer";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,42 +18,22 @@ const App = () => {
           name="HomeScreen"
           component={HomeScreen}
           options={({ navigation }) => ({
-            headerStyle: {
-              backgroundColor: "rgb(194, 158, 206)",
-            },
-            headerTitle: () => (
-              <View
-                style={{
-                  flex: 1,
-                  alignItems: "center",
-                }}
-              >
-                <Text
-                  style={{ fontWeight: "bold", color: "#000", fontSize: 28 }}
-                >
-                  NefSports®
-                </Text>
+            header: () => (
+              <View style={{ backgroundColor: "rgb(194, 158, 206)", alignItems: "center", paddingVertical: 20 }}>
+                <Text style={{ fontWeight: "bold", color: "#000", fontSize: 28 }}>NefSports®</Text>
+                <View style={{ flexDirection: "row", justifyContent: "space-around", paddingVertical: 10 }}>
+                  <TouchableOpacity onPress={() => alert("Navigate to Products")} style={{ paddingHorizontal: 20 }}>
+                    <Text style={{ fontSize: 18, color: "#000" }}>Productos</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => navigation.navigate("ProductFormScreen")} style={{ paddingHorizontal: 20 }}>
+                    <Text style={{ fontSize: 18, color: "#000" }}>Nuevo</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
             ),
-            headerRight: () => (
-              <TouchableOpacity
-                onPress={() => navigation.navigate("ProductFormScreen")}
-              >
-                <Text
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: 20,
-                    marginRight: 15,
-                    color: "#000",
-                  }}
-                >
-                  Nuevo
-                </Text>
-              </TouchableOpacity>
-            ),
+            headerShown: true,
           })}
         />
-
         <Stack.Screen
           name="ProductFormScreen"
           component={ProductFormScreen}
@@ -60,11 +41,10 @@ const App = () => {
             title: "Agregar producto",
             headerStyle: {
               backgroundColor: "rgb(194, 158, 206)",
-              
             },
             headerTitleStyle: { fontWeight: "bold", color: "#000" },
             headerTintColor: "#000",
-            headerTitleAlign: "center"
+            headerTitleAlign: "center",
           }}
         />
         <Stack.Screen
@@ -74,11 +54,23 @@ const App = () => {
             title: "Editar producto",
             headerStyle: {
               backgroundColor: "rgb(194, 158, 206)",
-              
             },
             headerTitleStyle: { fontWeight: "bold", color: "#000" },
             headerTintColor: "#000",
-            headerTitleAlign: "center"
+            headerTitleAlign: "center",
+          }}
+        />
+        <Stack.Screen
+          name="PrincipalScreen"
+          component={PrincipalScreen}
+          options={{
+            title: "Principal",
+            headerStyle: {
+              backgroundColor: "rgb(194, 158, 206)",
+            },
+            headerTitleStyle: { fontWeight: "bold", color: "#000" },
+            headerTintColor: "#000",
+            headerTitleAlign: "center",
           }}
         />
       </Stack.Navigator>
