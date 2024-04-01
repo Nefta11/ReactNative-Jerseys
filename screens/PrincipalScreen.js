@@ -1,30 +1,34 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Card } from 'react-native';
+import { Card } from 'react-native-paper';
+
 
 const PrincipalScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>
-        Bienvenido a nuestro mundo de <Text style={styles.bold}>Jerseys de Fútbol Únicos y de Calidad</Text>.
-      </Text>
-      <View style={styles.imageContainer}>
-        <Image
-          style={styles.image}
-          source={{
-            uri: 'https://raw.githubusercontent.com/Nefta11/ReactNative-Jerseys/main/logo/logo.jpeg?' + new Date(),
-          }}
-          resizeMode="cover"
-        />
-      </View>
-      <Text style={styles.subtitle}>
-        Sobre Nosotros:
-      </Text>
-      <Text style={styles.description}>
-        Somos apasionados del fútbol y creemos que cada fanático merece un jersey que refleje su amor por el deporte. Nuestros jerseys son cuidadosamente seleccionados para ofrecerte calidad, estilo y autenticidad. Desde los equipos más grandes hasta los más pequeños, tenemos algo para todos.
-      </Text>
-      <Text style={styles.description}>
-        Explora nuestra colección y encuentra el jersey perfecto para ti. ¡Únete a la comunidad de fanáticos del fútbol y viste con orgullo los colores de tu equipo favorito!
-      </Text>
+      <Card style={styles.card}>
+        <Text style={styles.title}>
+          Bienvenido a nuestro mundo de <Text style={styles.bold}>Jerseys de Fútbol Únicos y de Calidad</Text>.
+        </Text>
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.image}
+            source={{
+              uri: 'https://raw.githubusercontent.com/Nefta11/ReactNative-Jerseys/main/logo/logo.jpeg?' + new Date(),
+            }}
+            resizeMode="cover"
+          />
+        </View>
+        <Text style={styles.subtitle}>
+          Sobre Nosotros:
+        </Text>
+        <Text style={styles.description}>
+          Somos apasionados del fútbol y creemos que cada fanático merece un jersey que refleje su amor por el deporte. Nuestros jerseys son cuidadosamente seleccionados para ofrecerte calidad, estilo y autenticidad. Desde los equipos más grandes hasta los más pequeños, tenemos algo para todos.
+        </Text>
+        <Text style={styles.description}>
+          Explora nuestra colección y encuentra el jersey perfecto para ti. ¡Únete a la comunidad de fanáticos del fútbol y viste con orgullo los colores de tu equipo favorito!
+        </Text>
+      </Card>
     </View>
   );
 };
@@ -35,6 +39,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
+  },
+  card: {
+    padding: 10,
+    borderRadius: 10,
   },
   title: {
     fontSize: 24,
