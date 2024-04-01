@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         paddingLeft: 40,
         paddingRight: 40,
         paddingTop: 20,
-        marginTop: -19,
+        marginTop: -10,
     },
 });
 
