@@ -55,14 +55,10 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#E5E7E9',
     borderRadius: 10,
-    marginBottom: 10,
+    marginBottom: 30,
     padding: 10,
     alignItems: 'center',
-    elevation: 3, // Agregar sombra en Android
-    shadowColor: '#000', // Agregar sombra en iOS
-    shadowOffset: { width: 0, height: 2 }, // Agregar sombra en iOS
-    shadowOpacity: 0.25, // Agregar sombra en iOS
-    shadowRadius: 3.84, // Agregar sombra en iOS
+    elevation: 3, 
   },
   cardHeader: {
     borderBottomWidth: 1,

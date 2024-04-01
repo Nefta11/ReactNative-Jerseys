@@ -16,24 +16,23 @@ const App = () => {
           name="HomeScreen"
           component={HomeScreen}
           options={({ navigation }) => ({
+            headerStyle: {
+              backgroundColor: "rgb(194, 158, 206)",
+            },
             headerTitle: () => (
               <View
                 style={{
                   flex: 1,
                   alignItems: "center",
-                  justifyContent: "center",
                 }}
               >
                 <Text
-                  style={{ fontWeight: "bold", color: "white", fontSize: 28 }}
+                  style={{ fontWeight: "bold", color: "#000", fontSize: 28 }}
                 >
                   NefSports®
                 </Text>
               </View>
             ),
-            headerStyle: {
-              backgroundColor: "black",
-            },
             headerRight: () => (
               <TouchableOpacity
                 onPress={() => navigation.navigate("ProductFormScreen")}
@@ -43,7 +42,7 @@ const App = () => {
                     fontWeight: "bold",
                     fontSize: 20,
                     marginRight: 15,
-                    color: "white",
+                    color: "#000",
                   }}
                 >
                   Nuevo
@@ -58,7 +57,13 @@ const App = () => {
           component={ProductFormScreen}
           options={{
             title: "Agregar producto",
-            headerTitleStyle: { fontWeight: "bold" },
+            headerStyle: {
+              backgroundColor: "rgb(194, 158, 206)",
+              
+            },
+            headerTitleStyle: { fontWeight: "bold", color: "#000" },
+            headerTintColor: "#000",
+            headerTitleAlign: "center"
           }}
         />
         <Stack.Screen
@@ -66,7 +71,13 @@ const App = () => {
           component={EditProductFormScreen}
           options={{
             title: "Editar producto",
-            headerTitleStyle: { fontWeight: "bold" },
+            headerStyle: {
+              backgroundColor: "rgb(194, 158, 206)",
+              
+            },
+            headerTitleStyle: { fontWeight: "bold", color: "#000" },
+            headerTintColor: "#000",
+            headerTitleAlign: "center"
           }}
         />
       </Stack.Navigator>
