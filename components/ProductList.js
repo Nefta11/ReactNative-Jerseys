@@ -56,7 +56,7 @@ const ClotheList = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'black',
+        backgroundColor: '#fffd',
         paddingLeft: 40,
         paddingRight: 40,
         paddingTop: 20,

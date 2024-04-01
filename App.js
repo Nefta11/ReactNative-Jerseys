@@ -4,6 +4,7 @@ import React from "react";
 import ProductFormScreen from "./screens/ProductFormScreen";
 import HomeScreen from "./screens/HomeScreen";
 import EditProductFormScreen from "./screens/EditProductFormScreen";
+import Footer from "./Footer";
 import { View, Text, TouchableOpacity } from "react-native";
 
 const Stack = createNativeStackNavigator();
@@ -81,6 +82,7 @@ const App = () => {
           }}
         />
       </Stack.Navigator>
+      <Footer />
     </NavigationContainer>
   );
 };
