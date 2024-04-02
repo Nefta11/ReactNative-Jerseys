@@ -103,6 +103,7 @@ const EditClotheFormScreen = ({ navigation, route }) => {
   );
 };
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
