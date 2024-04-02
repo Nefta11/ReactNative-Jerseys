@@ -6,7 +6,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductFormScreen from "./screens/ProductFormScreen";
 import EditProductFormScreen from "./screens/EditProductFormScreen";
 import PrincipalScreen from "./screens/PrincipalScreen";
-import Footer from "./Footer";
+import Footer from "./screens/Footer";
 
 
 const Stack = createNativeStackNavigator();
