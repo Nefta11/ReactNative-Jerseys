@@ -106,11 +106,12 @@ const EditClotheFormScreen = ({ navigation, route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor:'#D0E5F2',
     justifyContent: "center",
     paddingHorizontal: 20,
   },
   card: {
-    backgroundColor: 'rgb(194, 158, 206)',
+    backgroundColor: '#6D90A6',
     borderRadius: 10,
     marginBottom: 30,
     padding: 20,

@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   card: {
-    backgroundColor: 'rgb(194, 158, 206)',
+    backgroundColor: '#6D90A6',
     borderRadius: 10,
     marginBottom: 30,
     padding: 10,

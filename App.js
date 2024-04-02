@@ -20,7 +20,7 @@ const App = () => {
           component={HomeScreen}
           options={({ navigation }) => ({
             header: () => (
-<View style={{ backgroundColor: "rgb(194, 158, 206)", alignItems: "center", paddingTop: 45, paddingBottom: 10 }}>
+<View style={{ backgroundColor: "#254559", alignItems: "center", paddingTop: 45, paddingBottom: 10 }}>
                 <Text style={{ fontWeight: "bold", color: "#000", fontSize: 28 }}>NefSports®</Text>
                 <View style={{ flexDirection: "row", justifyContent: "space-around", paddingVertical: 10 }}>
                   <TouchableOpacity onPress={() => navigation.navigate("PrincipalScreen")} style={{ paddingHorizontal: 60 }}>
@@ -41,7 +41,7 @@ const App = () => {
           options={{
             title: "Agregar un nuevo jersey",
             headerStyle: {
-              backgroundColor: "rgb(194, 158, 206)",
+              backgroundColor: "#254559",
             },
             headerTitleStyle: { fontWeight: "bold", color: "#000" },
             headerTintColor: "#000",
@@ -54,7 +54,7 @@ const App = () => {
           options={{
             title: "Editar producto",
             headerStyle: {
-              backgroundColor: "rgb(194, 158, 206)",
+              backgroundColor: "#254559",
             },
             headerTitleStyle: { fontWeight: "bold", color: "#000" },
             headerTintColor: "#000",
@@ -67,7 +67,7 @@ const App = () => {
           options={{
             title: "¡ Bienvenido a NefSports® ! ",
             headerStyle: {
-              backgroundColor: "rgb(194, 158, 206)",
+              backgroundColor: "#254559",
             },
             headerTitleStyle: { fontWeight: "bold", color: "#000", fontSize: 28, },
             headerTintColor: "#000",

@@ -58,7 +58,7 @@ const ProductItem = ({ item, navigation }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: 'rgb(194, 158, 206)',
+    backgroundColor: '#6D90A6',
     borderRadius: 10,
     marginBottom: 10,
     padding: 10,
