@@ -11,6 +11,7 @@ const Footer = () => {
     Linking.openURL('https://github.com/Nefta11');
   };
 
+  
   const handleInstagramPress = () => {
     Linking.openURL('https://www.instagram.com/nefth_07/');
   };
