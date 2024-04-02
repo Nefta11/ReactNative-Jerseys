@@ -20,7 +20,7 @@ const Footer = () => {
   };
 
   return (
-    <View style={{ alignItems: 'center', backgroundColor: '#2A4FBF', paddingVertical: 5 }}>
+    <View style={{ alignItems: 'center', backgroundColor: '#F2B950', paddingVertical: 5 }}>
       <Text style={{ fontSize: 16, color: 'black' }}>Developed by Neft</Text>
       <View style={{ flexDirection: 'row', marginTop: 5 }}>
         <TouchableOpacity onPress={handleFacebookPress}>

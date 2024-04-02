@@ -20,14 +20,14 @@ const App = () => {
           component={HomeScreen}
           options={({ navigation }) => ({
             header: () => (
-<View style={{ backgroundColor: "#2A4FBF", alignItems: "center", paddingTop: 45, paddingBottom: 10 }}>
-                <Text style={{ fontWeight: "bold", color: "#000", fontSize: 28 }}>NefSports®</Text>
+<View style={{ backgroundColor: "#F2B950", alignItems: "center", paddingTop: 45, paddingBottom: 10 }}>
+                <Text style={{ fontWeight: "bold", color: "white", fontSize: 28 }}>NefSports®</Text>
                 <View style={{ flexDirection: "row", justifyContent: "space-around", paddingVertical: 10 }}>
                   <TouchableOpacity onPress={() => navigation.navigate("PrincipalScreen")} style={{ paddingHorizontal: 60 }}>
-                    <Text style={{ fontSize: 18, color: "#000" }}>Inicio</Text>
+                    <Text style={{ fontSize: 18, color: "white" }}>Inicio</Text>
                   </TouchableOpacity>
                   <TouchableOpacity onPress={() => navigation.navigate("ProductFormScreen")} style={{ paddingHorizontal: 60 }}>
-                    <Text style={{ fontSize: 18, color: "#000" }}>Nuevo</Text>
+                    <Text style={{ fontSize: 18, color: "white" }}>Nuevo</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -41,7 +41,7 @@ const App = () => {
           options={{
             title: "Agregar un nuevo jersey",
             headerStyle: {
-              backgroundColor: "#D78BD9",
+              backgroundColor: "#F2B950",
             },
             headerTitleStyle: { fontWeight: "bold", color: "#000" },
             headerTintColor: "#000",
@@ -54,10 +54,10 @@ const App = () => {
           options={{
             title: "Editar producto",
             headerStyle: {
-              backgroundColor: "#D78BD9",
+              backgroundColor: "#F2B950",
             },
             headerTitleStyle: { fontWeight: "bold", color: "#000" },
-            headerTintColor: "#D78BD9",
+            headerTintColor: "#F2B950",
             headerTitleAlign: "center",
           }}
         />
@@ -67,7 +67,7 @@ const App = () => {
           options={{
             title: "¡ Bienvenido a NefSports® ! ",
             headerStyle: {
-              backgroundColor: "#D78BD9",
+              backgroundColor: "#F2B950",
             },
             headerTitleStyle: { fontWeight: "bold", color: "#000", fontSize: 28, },
             headerTintColor: "#000",

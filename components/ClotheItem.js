@@ -100,8 +100,8 @@ const styles = StyleSheet.create({
     color: 'white', // Color blanco
   },
   textItem: {
-    fontSize: 14,
-    color: 'black',
+    fontSize: 16,
+    color: '#fff',
     marginBottom: 6,
   },
   buttonContainer: {
