@@ -89,7 +89,7 @@ const ProductFormScreen = ({ navigation }) => {
                     title="Guardar Jersey"
                     onPress={handleEnviarFormulario}
                     style={styles.button}
-                    color="#000000"
+                    color="#F2B950"
                 />
             </View>
         </View>
@@ -99,11 +99,12 @@ const ProductFormScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor:'#D0E5F2',
         justifyContent: 'center',
         paddingHorizontal: 20,
     },
     card: {
-        backgroundColor: 'rgb(194, 158, 206)',
+        backgroundColor: '#2A4FBF',
         borderRadius: 10,
         marginBottom: 30,
         padding: 20,
@@ -126,14 +127,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         borderRadius: 5,
         color: '#ffffff',
-    },
-    button: {
-        backgroundColor: '#ffffff',
-        padding: 15,
-        borderRadius: 5,
-        color: '#000000',
-        fontWeight: 'bold',
-        width: '40%',
     },
 });
 

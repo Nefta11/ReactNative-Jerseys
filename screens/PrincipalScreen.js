@@ -35,11 +35,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    backgroundColor:'#D0E5F2',
     alignItems: 'center',
     paddingHorizontal: 20,
   },
   card: {
-    backgroundColor: '#6D90A6',
+    backgroundColor: '#2A4FBF',
     borderRadius: 10,
     marginBottom: 30,
     padding: 10,

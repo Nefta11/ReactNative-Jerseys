@@ -58,7 +58,7 @@ const ProductItem = ({ item, navigation }) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#6D90A6',
+    backgroundColor: '#2A4FBF',
     borderRadius: 10,
     marginBottom: 10,
     padding: 10,
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   cardHeader: {
     borderBottomWidth: 1,
-    borderBottomColor: '#BDC3C7',
+    borderBottomColor: '',
     paddingBottom: 5,
     marginBottom: 5,
   },
@@ -111,21 +111,21 @@ const styles = StyleSheet.create({
     width: '90%',
   },
   buttonEdit: {
-    backgroundColor: 'black',
+    backgroundColor: '#F2B950',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
     width: '35%',
   },
   buttonDelete: {
-    backgroundColor: 'black',
+    backgroundColor: '#F2B950',
     padding: 10,
     borderRadius: 5,
     alignItems: 'center',
     width: '35%',
   },
   buttonText: {
-    color: '#ECF0F1',
+    color: 'black',
     fontWeight: 'bold',
   },
 });
