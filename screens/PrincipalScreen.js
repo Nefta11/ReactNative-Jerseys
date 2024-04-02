@@ -10,14 +10,13 @@ const PrincipalScreen = () => {
           Bienvenido a nuestro mundo de <Text style={styles.bold}>Jerseys de Fútbol Únicos y de Calidad</Text>.
         </Text>
         <View style={styles.imageContainer}>
-          <Image
-            style={styles.image}
-            source={{
-              uri: 'https://raw.githubusercontent.com/Nefta11/ReactNative-Jerseys/main/logo/logo.jpeg?' + new Date(),
-            }}
-            resizeMode="cover"
-          />
-        </View>
+    <Image
+        style={styles.image}
+        source={{ uri: 'https://raw.githubusercontent.com/Nefta11/ReactNative-Jerseys/main/logo/logo.jpeg?' + new Date() }}
+        resizeMode="cover"
+    />
+</View>
+
         <Text style={styles.subtitle}>
           Sobre Nosotros:
         </Text>
