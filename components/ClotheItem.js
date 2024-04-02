@@ -18,16 +18,13 @@ const ProductItem = ({ item, navigation }) => {
   return (
     <TouchableOpacity onPress={() => setExpanded(!expanded)} activeOpacity={0.5}>
       <View style={[styles.card, expanded && styles.expandedCard]}>
-        <View style={styles.cardHeader}>
           <Text style={styles.teamName}>{item.team}</Text>
-        </View>
         <View style={styles.cardBody}>
           <View style={styles.imageContainer}>
             <Image source={{ uri: item.urlImg }} style={styles.image} />
           </View>
           {expanded && (
             <View style={styles.detailsContainer}>
-              <Text style={styles.textItem}>Código de barras: {item.code}</Text>
               <Text style={styles.textItem}>Equipo: {item.team}</Text>
               <Text style={styles.textItem}>Precio: ${item.price}</Text>
               <Text style={styles.textItem}>Tamaño: {item.size}</Text>
@@ -99,7 +96,7 @@ const styles = StyleSheet.create({
   teamName: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 0,
+    marginBottom: 8,
     color: 'white', // Color blanco
   },
   textItem: {
