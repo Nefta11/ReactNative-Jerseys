@@ -80,15 +80,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imageContainer: {
-    marginRight: 10,
+    marginRight: 20,
     justifyContent: 'center',
   },
   image: {
-    width: 150,
-    height: 150,
+    width: 145,
+    height: 145,
     resizeMode: 'cover',
     marginBottom: 5,
-    borderRadius: 10,
+    borderRadius: 20,
   },
   detailsContainer: {
     flex: 1,
