@@ -8,7 +8,6 @@ import EditProductFormScreen from "./screens/EditProductFormScreen";
 import PrincipalScreen from "./screens/PrincipalScreen";
 import Footer from "./screens/Footer";
 
-
 const Stack = createNativeStackNavigator();
 
 const App = () => {
