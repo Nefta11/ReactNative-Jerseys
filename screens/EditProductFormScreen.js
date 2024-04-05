@@ -16,7 +16,6 @@ const EditClotheFormScreen = ({ navigation, route }) => {
     status: item?.status ?? "",
   });
 
-  
   const handleChange = (name, value) => setClothe({ ...clothe, [name]: value });
 
   const handleSaveChanges = async () => {
