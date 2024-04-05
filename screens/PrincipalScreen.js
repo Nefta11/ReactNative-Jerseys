@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     textAlign: 'center',
     marginBottom: 20,
+    color:'#ffff'
   },
   bold: {
     fontWeight: 'bold',
@@ -67,12 +68,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     marginTop: 20,
+    color:'#ffff'
   },
   description: {
     fontSize: 16,
     textAlign: 'center',
     marginHorizontal: 20,
     marginTop: 10,
+    color:'#ffff'
   },
 });
 
