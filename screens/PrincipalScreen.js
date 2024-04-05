@@ -59,8 +59,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   image: {
-    width: 250, // Ajusta el ancho de la imagen según sea necesario
-    height: 250, // Ajusta la altura de la imagen según sea necesario
+    width: 250,
+    height: 250, 
     borderRadius: 20,
   },
   subtitle: {
