@@ -16,7 +16,6 @@ const PrincipalScreen = () => {
         resizeMode="cover"
     />
 </View>
-
         <Text style={styles.subtitle}>
           Sobre Nosotros:
         </Text>
