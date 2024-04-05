@@ -12,7 +12,7 @@ const PrincipalScreen = () => {
         <View style={styles.imageContainer}>
     <Image
         style={styles.image}
-        source={{ uri: 'https://raw.githubusercontent.com/Nefta11/ReactNative-Jerseys/main/logo/logo.jpeg?' + new Date() }}
+        source={{ uri: 'https://raw.githubusercontent.com/Nefta11/ReactNative-Jerseys/main/logo/logo%203.jpeg?' + new Date() }}
         resizeMode="cover"
     />
 </View>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     textAlign: 'center',
     marginBottom: 20,
-    color:'#ffff'
+     color:'#ffff'
   },
   bold: {
     fontWeight: 'bold',
