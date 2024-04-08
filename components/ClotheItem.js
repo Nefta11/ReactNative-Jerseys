@@ -8,8 +8,7 @@ const ProductItem = ({ item, navigation }) => {
   const handleDelete = async () => {
     try {
       const response = await deleteClothe(item.code);
-      console.log(response); // Imprime la respuesta para depuración
-      // Aquí puedes agregar código para actualizar la lista de productos después de eliminar uno
+      console.log(response); 
     } catch (error) {
       console.error(error);
     }

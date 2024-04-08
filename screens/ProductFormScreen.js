@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Button, Switch } from 'react-native';
 import { insertClothe } from '../api';
 
 const ProductFormScreen = ({ navigation }) => {
@@ -13,7 +13,7 @@ const ProductFormScreen = ({ navigation }) => {
         color: '',
         stock: '',
         season: '',
-        status: '',
+        status: '', // Inicializado como cadena vacía
     });
 
     const handleChange = (name, value) => setClothe({ ...clothe, [name]: value });
@@ -78,13 +78,13 @@ const ProductFormScreen = ({ navigation }) => {
                     onChangeText={(text) => handleChange('season', text)}
                     style={styles.input}
                 />
-                <TextInput
-                    placeholder="Estado"
-                    keyboardType='numeric'
-                    value={clothe.status.toString()}
-                    onChangeText={(text) => handleChange('status', text)}
-                    style={styles.input}
-                />
+                <View style={styles.switchContainer}>
+                    <Text style={styles.switchLabel}>Estado:</Text>
+                    <Switch
+                        value={clothe.status === '1'} // Verificamos si el estado es '1'
+                        onValueChange={(value) => handleChange('status', value ? '1' : '0')} // Convertimos a '1' o '0' dependiendo del valor del Switch
+                    />
+                </View>
                 <Button
                     title="Guardar Jersey"
                     onPress={handleEnviarFormulario}
@@ -127,6 +127,24 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         borderRadius: 5,
         color: '#ffffff',
+    },
+    switchContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginBottom: 10,
+    },
+    switchLabel: {
+        fontSize: 16,
+        color: '#ffffff',
+    },
+    button: {
+        backgroundColor: '#F2B950',
+        padding: 15,
+        borderRadius: 5,
+        color: '#000000',
+        fontWeight: 'bold',
+        width: '100%',
     },
 });
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput, Button } from "react-native";
+import { View, Text, StyleSheet, TextInput, Button, Switch } from "react-native";
 import { updateClothe } from "../api";
 
 const EditClotheFormScreen = ({ navigation, route }) => {
@@ -13,10 +13,9 @@ const EditClotheFormScreen = ({ navigation, route }) => {
     color: item?.color ?? "",
     stock: item?.stock ?? "",
     season: item?.season ?? "",
-    status: item?.status ?? "",
+    status: item?.status ?? 0, // Default status to 0
   });
 
-  
   const handleChange = (name, value) => setClothe({ ...clothe, [name]: value });
 
   const handleSaveChanges = async () => {
@@ -86,13 +85,14 @@ const EditClotheFormScreen = ({ navigation, route }) => {
           onChangeText={(text) => handleChange("season", text)}
           style={styles.input}
         />
-        <TextInput
-          placeholder="Estado"
-          keyboardType="numeric"
-          value={clothe.status.toString()}
-          onChangeText={(text) => handleChange("status", text)}
-          style={styles.input}
-        />
+        <View style={styles.switchContainer}>
+          <Text style={styles.switchLabel}>Estado</Text>
+          <Switch
+            value={clothe.status === 1}
+            onValueChange={(value) => handleChange("status", value ? 1 : 0)}
+          />
+        </View>
+
         <Button
           title="Guardar Cambios"
           onPress={handleSaveChanges}
@@ -136,6 +136,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     color: "#ffffff",
   },
+  switchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 10,
+  },
+  switchLabel: {
+    fontSize: 16,
+    color: "#ffffff",
+  },
   button: {
     backgroundColor: "#ffffff",
     padding: 15,
@@ -145,6 +155,5 @@ const styles = StyleSheet.create({
     width: "40%",
   },
 });
-
 
 export default EditClotheFormScreen;
