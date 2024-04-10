@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, Button, Switch } from "react-native";
 import { updateClothe } from "../api";
 
+
 const EditClotheFormScreen = ({ navigation, route }) => {
   const { item } = route.params;
   const [clothe, setClothe] = useState({
@@ -15,6 +16,7 @@ const EditClotheFormScreen = ({ navigation, route }) => {
     season: item?.season ?? "",
     status: item?.status ?? 0, // Default status to 0
   });
+
 
   const handleChange = (name, value) => setClothe({ ...clothe, [name]: value });
 
