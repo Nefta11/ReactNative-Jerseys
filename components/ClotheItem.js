@@ -14,8 +14,6 @@ const ProductItem = ({ item, navigation }) => {
     }
   };
 
-
-  
   return (
     <TouchableOpacity onPress={() => setExpanded(!expanded)} activeOpacity={0.5}>
       <View style={[styles.card, expanded && styles.expandedCard]}>
