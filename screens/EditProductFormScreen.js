@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, Button, Switch } from "react-native";
 import { updateClothe } from "../api";
 
-
 const EditClotheFormScreen = ({ navigation, route }) => {
   const { item } = route.params;
   const [clothe, setClothe] = useState({
